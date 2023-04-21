@@ -15,4 +15,22 @@ git config --global user.email "MY_NAME@example.com"
 
 ## Git shortcuts
 
-TODO
+```bash
+# Enables 'git s' as a shortcut to 'git status'
+git config --global alias.s status
+
+# Enables 'git l' as a shortcut to 'git log --oneline'
+git config --global alias.l 'log --oneline'
+```
+
+## Some commands
+
+```bash
+git push -u origin master
+# Links the origin target to the local master branch
+```
+
+## Conventions
+
+Commit message verb tense preference:
+https://stackoverflow.com/a/3580764/1239006
