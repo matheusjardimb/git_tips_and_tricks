@@ -22,5 +22,5 @@ jobs:
       - name: Install npm dependencies
         run: npm install --dev
 
-      - name: Lint HTML, CSS, JS, MarkDown, and YML files
-        run: npx prettier --check "**/*.{html,css,js,md,yml}"
+      - name: Lint multiple file extensions
+        run: ./.husky/prettier.sh
