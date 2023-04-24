@@ -28,6 +28,14 @@ git config --global alias.l 'log --oneline'
 ```bash
 git push -u origin master
 # Links the origin target to the local master branch
+
+git switch -c BRANCH
+# Same as:
+#   git checkout -b BRANCH
+
+git branch -r
+# Lists local branches and their respective upstream (remote repo)
+
 ```
 
 ## Conventions
