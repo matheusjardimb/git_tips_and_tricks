@@ -36,9 +36,16 @@ git switch -c BRANCH
 git branch -r
 # Lists local branches and their respective upstream (remote repo)
 
+git reflog
+# TODO add comments on reflog
 ```
 
 ## Conventions
 
-Commit message verb tense preference:
-https://stackoverflow.com/a/3580764/1239006
+### Commit message verb tense preference:
+
+TODO: https://stackoverflow.com/a/3580764/1239006
+
+### Gitflow
+
+TODO
