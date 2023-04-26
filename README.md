@@ -22,6 +22,12 @@ git config --global alias.s status
 
 # Enables 'git l' as a shortcut to 'git log --oneline'
 git config --global alias.l 'log --oneline'
+
+# Enables 'git a' as a shortcut to 'git add -A'
+git config --global alias.a 'add -A'
+
+# Enables 'git cm' as a shortcut to 'commit -a -m'
+git config --global alias.cm 'commit -a -m'
 ```
 
 ## Some commands
