@@ -1,6 +1,6 @@
 # General Git tips and tricks
 
-General tips and tricks for git users
+Opinionated list of tips and tricks for setting up a git env.
 
 ## Installing Git and other tools
 
@@ -16,43 +16,91 @@ git config --global core.editor "nano"
 
 ## Git shortcuts
 
-```bash
-# Enables 'git s' as a shortcut to 'git status'
-git config --global alias.s status
+Add the following lines to `~/.gitconfig` to add aliases globally:
 
-# Enables 'git l' as a shortcut to 'git log --oneline'
-git config --global alias.l 'log --oneline'
+```gitconfig
+[alias]
+    # Short-formatted version of 'git log'
+    l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
 
-# Enables 'git a' as a shortcut to 'git add -A'
-git config --global alias.a 'add -A'
+    a = add
+    aa = add -A
+    ap = add -p
+    
+    c = commit --verbose
+    ca = commit -a --verbose
+    cm = commit -m
+    cam = commit -a -m
+    m = commit --amend --verbose
+    
+    d = diff
+    ds = diff --stat
+    dc = diff --cached
 
-# Enables 'git cm' as a shortcut to 'commit -a -m'
-git config --global alias.cm 'commit -a -m'
+    s = status -s
+    st = status
+
+    co = checkout
+    cob = checkout -b
+    
+    # List branches sorted by last modified
+    b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
+
+    # List aliases
+    la = "!git config -l | grep alias | cut -c 7-"
 ```
 
-## Some commands
+## Useful commands to keep in mind
 
 ```bash
-git push -u origin master
 # Links the origin target to the local master branch
+git push -u origin master
 
+# Newer version of: git checkout -b BRANCH
 git switch -c BRANCH
-# Same as:
-#   git checkout -b BRANCH
 
-git branch -r
 # Lists local branches and their respective upstream (remote repo)
+git branch -r
 
-git reflog
 # TODO add comments on reflog
+git reflog
 ```
 
 ## Conventions
 
 ### Commit message verb tense preference:
 
-TODO: https://stackoverflow.com/a/3580764/1239006
+- https://stackoverflow.com/a/3580764/1239006
+- https://stackoverflow.com/questions/3580013/should-i-use-past-or-present-tense-in-git-commit-messages
 
 ### Gitflow
 
 TODO
+
+### Edit .bashrc
+
+Edit `~./bashrc` file and add the following at the end:
+
+https://askubuntu.com/a/946716
+
+``` bash
+### Shows git branch name
+force_color_prompt=yes
+color_prompt=yes
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(parse_git_branch)\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)\$ '
+fi
+unset color_prompt force_color_prompt
+```
+
+### Sources
+
+- https://www.udemy.com/course/git-and-github-bootcamp/
+- https://gist.github.com/mwhite/6887990
+- https://www.durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
+- https://github.com/GitAlias/gitalias
