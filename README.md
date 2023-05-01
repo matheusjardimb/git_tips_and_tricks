@@ -26,13 +26,13 @@ Add the following lines to `~/.gitconfig` to add aliases globally:
     a = add
     aa = add -A
     ap = add -p
-    
+
     c = commit --verbose
     ca = commit -a --verbose
     cm = commit -m
     cam = commit -a -m
     m = commit --amend --verbose
-    
+
     d = diff
     ds = diff --stat
     dc = diff --cached
@@ -42,7 +42,7 @@ Add the following lines to `~/.gitconfig` to add aliases globally:
 
     co = checkout
     cob = checkout -b
-    
+
     # List branches sorted by last modified
     b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
 
@@ -83,7 +83,7 @@ Edit `~./bashrc` file and add the following at the end:
 
 https://askubuntu.com/a/946716
 
-``` bash
+```bash
 ### Shows git branch name
 force_color_prompt=yes
 color_prompt=yes
