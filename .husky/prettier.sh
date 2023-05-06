@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-npx prettier --check "**/*.{html,css,js,md,yml,json}"
+npx prettier -w "**/*.{html,css,js,md,yml,json}"
