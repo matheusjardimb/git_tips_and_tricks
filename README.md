@@ -4,7 +4,12 @@ Opinionated list of tips and tricks for setting up a git env.
 
 ## Installing Git and other tools
 
-TODO
+The official Git [documentation](https://git-scm.com/download/linux) points to the following command for installing it on Debian/Ubuntu:
+
+```bash 
+apt-get install git
+```
+
 
 ## Git env setup
 
