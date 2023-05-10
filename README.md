@@ -4,7 +4,12 @@ Opinionated list of tips and tricks for setting up a git env.
 
 ## Installing Git and other tools
 
-TODO
+Run the following command for installing git and gitk:
+
+```bash 
+sudo apt-get install git gitk
+```
+
 
 ## Git env setup
 
