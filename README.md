@@ -8,10 +8,9 @@ This page is **UNDER DEVELOPMENT**, feel free to enrich it and solve TODO's via 
 
 Run the following command for installing git and gitk:
 
-```bash 
+```bash
 sudo apt-get install git gitk
 ```
-
 
 ## Git env setup
 
@@ -85,13 +84,12 @@ git reflog
 TODO: add brief description.
 
 References:
+
 - https://nvie.com/posts/a-successful-git-branching-model/
 - https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
 - https://leanpub.com/git-flow/read
 
 ![Gitflow](images/git-flow-nvie.png "Author: Vincent Driessen - Original blog post: http://nvie.com/posts/a-succesful-git-branching-model")
-
-
 
 ### Edit .bashrc
 

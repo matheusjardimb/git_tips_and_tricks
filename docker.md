@@ -1,5 +1,5 @@
-# Docker common tools 
+# Docker common tools
 
 ## Installing docker
-## Installing docker compose
 
+## Installing docker compose

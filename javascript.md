@@ -1,5 +1,3 @@
-# JavaScript common tools 
+# JavaScript common tools
 
 ## Installing NVM
-
-
