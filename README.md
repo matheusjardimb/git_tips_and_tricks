@@ -1,27 +1,49 @@
 # General Git tips and tricks
 
-Opinionated list of tips and tricks for setting up a git env.
+Opinionated list of tips and tricks for using git. This page is **UNDER DEVELOPMENT**, feel free to
+contribute via PR's.
 
-## Installing Git and other tools
+- [Setting up the environment](#setting-up-your-environment)
+- [Popular conventions](#popular-conventions)
+- [Useful Resources](#useful-resources)
 
-Run the following command for installing git and gitk:
+## Setting up your environment
+
+### Installing Git and other tools
+
+Run the following command for installing [git](https://git-scm.com/) and [gitk](https://git-scm.com/docs/gitk):
 
 ```bash 
 sudo apt-get install git gitk
 ```
 
+### Setting user information
 
-## Git env setup
+General information which needs to be set to identify commits' authors:
 
 ```bash
 git config --global user.name "FIRST_NAME LAST_NAME"
 git config --global user.email "MY_NAME@example.com"
+ 
+# Switch 'nano' with your preferred editor
 git config --global core.editor "nano"
 ```
 
-## Git shortcuts
+Run these commands inside a repo with `--local` (instead of `--global`) to override such values at project level.
 
-Add the following lines to `~/.gitconfig` to add aliases globally:
+Check the stored settings with:
+
+```bash
+# Change the param name to check a specific value
+git config user.name
+
+# Or list all settings with
+git config -l
+```
+
+### Adding Git shortcuts
+
+Add the following lines at `~/.gitconfig` to create aliases globally:
 
 ```gitconfig
 [alias]
@@ -55,38 +77,10 @@ Add the following lines to `~/.gitconfig` to add aliases globally:
     la = "!git config -l | grep alias | cut -c 7-"
 ```
 
-## Useful commands to keep in mind
+### Displaying current branch on console
 
-```bash
-# Links the origin target to the local master branch
-git push -u origin master
-
-# Newer version of: git checkout -b BRANCH
-git switch -c BRANCH
-
-# Lists local branches and their respective upstream (remote repo)
-git branch -r
-
-# TODO add comments on reflog
-git reflog
-```
-
-## Conventions
-
-### Commit message verb tense preference:
-
-- https://stackoverflow.com/a/3580764/1239006
-- https://stackoverflow.com/questions/3580013/should-i-use-past-or-present-tense-in-git-commit-messages
-
-### Gitflow
-
-TODO
-
-### Edit .bashrc
-
-Edit `~./bashrc` file and add the following at the end:
-
-https://askubuntu.com/a/946716
+Add the following snippet at the end of `~./bashrc` to display the current branch on the console (took
+from [askubuntu](https://askubuntu.com/a/946716)):
 
 ```bash
 ### Shows git branch name
@@ -103,9 +97,46 @@ fi
 unset color_prompt force_color_prompt
 ```
 
-### Sources
+## Popular conventions
 
-- https://www.udemy.com/course/git-and-github-bootcamp/
+### Squash commits while merging code
+
+> TODO: fill this section
+
+### Commit message verb tense preference:
+
+> TODO: fill this section
+
+- https://stackoverflow.com/a/3580764/1239006
+- https://stackoverflow.com/questions/3580013/should-i-use-past-or-present-tense-in-git-commit-messages
+
+### Gitflow
+
+> TODO: fill this section
+
+## Useful Resources
+
+### Useful commands to keep in mind
+
+> TODO: fill this section
+
+```bash
+# Links the origin target to the local master branch
+git push -u origin master
+
+# Newer version of: git checkout -b BRANCH
+git switch -c BRANCH
+
+# Lists local branches and their respective upstream (remote repo)
+git branch -r
+
+# TODO add comments on reflog
+git reflog
+```
+
+### Useful links
+
+- https://udemy.com/course/git-and-github-bootcamp
 - https://gist.github.com/mwhite/6887990
-- https://www.durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/
+- https://durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples
 - https://github.com/GitAlias/gitalias
