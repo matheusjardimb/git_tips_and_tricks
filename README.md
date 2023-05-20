@@ -13,7 +13,7 @@ contribute via PR's.
 
 Run the following command for installing [git](https://git-scm.com/) and [gitk](https://git-scm.com/docs/gitk):
 
-```bash 
+```bash
 sudo apt-get install git gitk
 ```
 
@@ -24,7 +24,7 @@ General information which needs to be set to identify commits' authors:
 ```bash
 git config --global user.name "FIRST_NAME LAST_NAME"
 git config --global user.email "MY_NAME@example.com"
- 
+
 # Switch 'nano' with your preferred editor
 git config --global core.editor "nano"
 ```
@@ -96,6 +96,10 @@ else
 fi
 unset color_prompt force_color_prompt
 ```
+
+### Setting pre-commit hooks
+
+> TODO: fill this section
 
 ## Popular conventions
 
