@@ -122,6 +122,7 @@ References:
 Edit `~./bashrc` file and add the following at the end:
 
 https://askubuntu.com/a/946716
+
 > > > > > > > main
 
 ```bash
