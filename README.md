@@ -79,8 +79,50 @@ Add the following lines at `~/.gitconfig` to create aliases globally:
 
 ### Displaying current branch on console
 
+<<<<<<< HEAD
 Add the following snippet at the end of `~./bashrc` to display the current branch on the console (took
 from [askubuntu](https://askubuntu.com/a/946716)):
+=======
+
+```bash
+# Links the origin target to the local master branch
+git push -u origin master
+
+# Newer version of: git checkout -b BRANCH
+git switch -c BRANCH
+
+# Lists local branches and their respective upstream (remote repo)
+git branch -r
+
+# TODO add comments on reflog
+git reflog
+```
+
+## Conventions
+
+### Commit message verb tense preference:
+
+- https://stackoverflow.com/a/3580764/1239006
+- https://stackoverflow.com/questions/3580013/should-i-use-past-or-present-tense-in-git-commit-messages
+
+### Gitflow
+
+TODO: add brief description.
+
+References:
+
+- https://nvie.com/posts/a-successful-git-branching-model/
+- https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+- https://leanpub.com/git-flow/read
+
+![Gitflow](images/git-flow-nvie.png "Author: Vincent Driessen - Original blog post: http://nvie.com/posts/a-succesful-git-branching-model")
+
+### Edit .bashrc
+
+Edit `~./bashrc` file and add the following at the end:
+
+https://askubuntu.com/a/946716
+> > > > > > > main
 
 ```bash
 ### Shows git branch name
