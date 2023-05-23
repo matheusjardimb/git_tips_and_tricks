@@ -1,6 +1,6 @@
 name: Check exact package.json dependencies version
 
-on: [ pull_request ]
+on: [pull_request]
 
 env:
   FORCE_COLOR: 2
