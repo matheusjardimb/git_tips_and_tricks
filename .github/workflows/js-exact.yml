@@ -1,0 +1,17 @@
+name: Check exact package.json dependencies version
+
+on: [ pull_request ]
+
+env:
+  FORCE_COLOR: 2
+  NODE: 18
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    name: Checking lint on HTML, CSS and JS files
+    steps:
+      - name: Check package.json dependencies version
+        uses: matheusjardimb/js-exact-dependency-action
+        with:
+          milliseconds: 1000
