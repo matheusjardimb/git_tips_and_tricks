@@ -1,15 +1,15 @@
 name: Check exact package.json dependencies version
 
-on: [pull_request]
+on: [ pull_request ]
 
 env:
   FORCE_COLOR: 2
   NODE: 18
 
 jobs:
-  linting:
+  js-exact:
     runs-on: ubuntu-latest
-    name: Checking lint on HTML, CSS and JS files
+    name: Checking package.json is using only exact dependencies version
     steps:
       - uses: actions/checkout@v3
 
