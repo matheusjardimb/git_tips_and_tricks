@@ -1,0 +1,15 @@
+name: Check exact package.json dependencies version
+
+on: [pull_request]
+
+jobs:
+  js-exact:
+    runs-on: ubuntu-latest
+    name: Checking package.json is using only exact dependencies version
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check package.json dependencies version
+        uses: matheusjardimb/js-exact-dependency-action@main
+        with:
+          milliseconds: 1000
