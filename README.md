@@ -70,6 +70,9 @@ Add the following lines at `~/.gitconfig` to create aliases globally:
     co = checkout
     cob = checkout -b
 
+    # Remove files from staging area
+    unstage = restore --staged
+
     # List branches sorted by last modified
     b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'"
 
