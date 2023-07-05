@@ -1,0 +1,18 @@
+name: Check for dependencies without specific version
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - develop
+      - feature/**
+
+jobs:
+  dependency_check_job:
+    runs-on: ubuntu-latest
+    name: Find merge conflicts
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check for dependencies without specific version
+        uses: matheusjardimb/js-exact-dependency-action@latest
