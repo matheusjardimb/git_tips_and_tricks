@@ -15,4 +15,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Check for dependencies without specific version
-        uses: matheusjardimb/js-exact-dependency-action@latest
+        uses: matheusjardimb/exact-dependency-checker-action@latest
