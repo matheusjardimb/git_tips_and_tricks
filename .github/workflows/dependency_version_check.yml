@@ -1,19 +1,19 @@
-name: Check for dependencies without specific version
+name: Check for invalid dependencies
 
 on:
   pull_request:
-#  push:
-#    branches:
-#      - main
-#      - develop
-#      - feature/**
+  push:
+    branches:
+      - main
+      - develop
+      - feature/**
 
 jobs:
   dependency_check_job:
     runs-on: ubuntu-latest
-    name: Find merge conflicts
+    name: Check for invalid dependencies
     steps:
-      #      - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
       - name: Check for dependencies without specific version
         uses: matheusjardimb/exact-dependency-checker-action@v0.8.1
