@@ -17,14 +17,3 @@ jobs:
 
       - name: Check for dependencies without specific version
         uses: matheusjardimb/exact-dependency-checker-action@v0.8.1
-        run: |
-          ls
-          ls /home
-          ls /home/runner
-          ls /home/runner/work
-          ls /home/runner/work/_actions/
-          ls /home/runner/work/_actions/matheusjardimb
-          ls /home/runner/work/_actions/matheusjardimb/exact-dependency-checker-action
-          ls /home/runner/work/_actions/matheusjardimb/exact-dependency-checker-action/v0.8.1
-          ls /home/runner/work/_actions/matheusjardimb/exact-dependency-checker-action/v0.8.1/dist
-          ls /home/runner/work/_actions/matheusjardimb/exact-dependency-checker-action/v0.8.1/dist/main.js
