@@ -22,6 +22,8 @@ jobs:
 
       - name: Check for dependencies without specific version
         uses: matheusjardimb/exact-dependency-checker-action@gh_action_fix
+        with:
+          milliseconds: 200
 
       - name: Check for dependencies without specific version
         uses: matheusjardimb/exact-dependency-checker-action@v0.8.1
