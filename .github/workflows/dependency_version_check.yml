@@ -19,4 +19,7 @@ jobs:
         uses: ruchika-jain/my-action@1.0.2
 
       - name: Check for dependencies without specific version
+        uses: matheusjardimb/exact-dependency-checker-action@gh_action_fix
+
+      - name: Check for dependencies without specific version
         uses: matheusjardimb/exact-dependency-checker-action@v0.8.1
