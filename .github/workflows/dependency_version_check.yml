@@ -15,8 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: TypeScript Container Action Template
-        uses: kevinpollet/typescript-container-action-template@v1
+      - name: Typescript template action
+        uses: ruchika-jain/my-action@1.0.2
 
       - name: Check for dependencies without specific version
         uses: matheusjardimb/exact-dependency-checker-action@v0.8.1
