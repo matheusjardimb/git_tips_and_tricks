@@ -16,4 +16,4 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Check for dependencies without specific version
-        uses: matheusjardimb/exact-dependency-checker-action@gh_action_fix
+        uses: matheusjardimb/exact-dependency-checker-action@latest
