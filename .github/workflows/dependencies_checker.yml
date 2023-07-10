@@ -14,6 +14,4 @@ jobs:
     name: Check for invalid dependencies
     steps:
       - uses: actions/checkout@v3
-
-      - name: Check for dependencies without specific version
-        uses: matheusjardimb/exact-dependency-checker-action@latest
+      - uses: matheusjardimb/dependencies-checker@latest
